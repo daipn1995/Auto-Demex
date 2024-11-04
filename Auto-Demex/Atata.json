@@ -1,0 +1,77 @@
+{
+  "drivers": [
+    {
+      "type": "chrome",
+      "alias": "chrome",
+      "createRetries": 2,
+      "options": {
+        "arguments": [
+          "start-maximized",
+          "disable-gpu"
+        ],
+        "extensions": [ ".\\Extensions\\Keplr.crx" ],
+        "userProfilePreferences": {
+          "download.default_directory": "{artifacts}"
+        }
+      }
+    },
+    {
+      "type": "chrome",
+      "alias": "chrome-headless",
+      "createRetries": 2,
+      "options": {
+        "arguments": [
+          "headless=new",
+          "window-size=1920,1080",
+          "disable-gpu"
+        ],
+        "userProfilePreferences": {
+          "download.default_directory": "{artifacts}"
+        }
+      }
+    },
+    {
+      "type": "firefox",
+      "createRetries": 2,
+      "options": {
+        "arguments": [ "--start-maximized" ]
+      }
+    },
+    {
+      "type": "edge",
+      "alias": "edge",
+      "createRetries": 2,
+      "options": {
+        "arguments": [
+          "start-maximized",
+          "disable-gpu"
+        ],
+        "userProfilePreferences": {
+          "download.default_directory": "{artifacts}"
+        }
+      }
+    },
+    {
+      "type": "edge",
+      "alias": "edge-headless",
+      "createRetries": 2,
+      "options": {
+        "arguments": [
+          "headless=new",
+          "start-maximized",
+          "disable-gpu"
+        ],
+        "userProfilePreferences": {
+          "download.default_directory": "{artifacts}"
+        }
+      }
+    }
+  ],
+  "culture": "en-GB",
+  "Api": {
+    "BaseUrl": ""
+  },
+  "BaseUrl": "https://beta-app.dem.exchange/",
+  "PrivateKey": "88f3239ff3230b64de2f8b55873b0254fad33fd9f9724500581ce32b17c5b5e1",
+  "WalletPassword": "12345678"
+}
